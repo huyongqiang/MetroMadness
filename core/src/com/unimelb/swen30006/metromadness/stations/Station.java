@@ -98,7 +98,7 @@ public class Station {
 		return lines;
 	}
 	public float getMaxPassengers(){
-		return getMaxPassengers();
+		return maxPassengers;
 	}
 
 	public void assignPassengers(Passenger[] passengers) {
