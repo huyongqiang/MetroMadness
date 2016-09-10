@@ -10,8 +10,8 @@ import com.unimelb.swen30006.metromadness.trains.Train;
 public class LongPlatformStation extends Station {
 
 	// public PassengerGenerator g;
-	public ArrayList<Passenger> waiting;
-	public float maxVolume;
+	private ArrayList<Passenger> waiting;
+	private float maxVolume;
 
 	public LongPlatformStation(float x, float y, PassengerRouter router, String name, float maxPax) {
 		super(x, y, router, name, maxPax);
