@@ -2,15 +2,12 @@ package com.unimelb.swen30006.metromadness;
 
 import java.util.ArrayList;
 
-import javax.swing.text.FlowView.FlowStrategy;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.passengers.PassengerGenerator;
 import com.unimelb.swen30006.metromadness.stations.Station;
 import com.unimelb.swen30006.metromadness.tracks.Line;
-import com.unimelb.swen30006.metromadness.tracks.Track;
 import com.unimelb.swen30006.metromadness.trains.Train;
 
 public class Simulation {
