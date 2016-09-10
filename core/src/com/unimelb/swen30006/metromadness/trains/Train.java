@@ -27,24 +27,24 @@ public class Train {
 	public static final float TRAIN_SPEED = 50f;
 
 	// The line that this is traveling on
-	public Line trainLine;
+	private Line trainLine;
 
 	// Passenger Information
-	public ArrayList<Passenger> passengers;
-	public float departureTimer;
+	private ArrayList<Passenger> passengers;
+	private float departureTimer;
 
 	// Station and track and position information
-	public Station station;
-	public Track track;
+	private Station station;
+	private Track track;
 	public Point2D.Float pos;
 
 	// Direction and direction
 	public boolean forward;
-	public State state;
+	private State state;
 
 	// State variables
-	public int numTrips;
-	public boolean disembarked;
+	private int numTrips;
+	private boolean disembarked;
 
 	protected String type = "train";
 
@@ -58,7 +58,7 @@ public class Train {
 
 	public void update(float delta) {
 		// Update all passengers
-		for (Passenger p : this.passengers) {
+		for (Passenger p : this.getPassengers()) {
 			p.update(delta);
 		}
 
@@ -202,7 +202,7 @@ public class Train {
 
 	public ArrayList<Passenger> disembark() {
 		ArrayList<Passenger> disembarking = new ArrayList<Passenger>();
-		Iterator<Passenger> iterator = this.passengers.iterator();
+		Iterator<Passenger> iterator = this.getPassengers().iterator();
 		while (iterator.hasNext()) {
 			Passenger p = iterator.next();
 			if (this.station.shouldLeave(p)) {
@@ -215,7 +215,7 @@ public class Train {
 
 	@Override
 	public String toString() {
-		return "Train [line=" + this.trainLine.name + ", departureTimer=" + departureTimer + ", pos=" + pos
+		return "Train line=" + this.trainLine.name + ", departureTimer=" + departureTimer + ", pos=" + pos
 				+ ", forward=" + forward + ", state=" + state + ", numTrips=" + numTrips + ", disembarked="
 				+ disembarked + "]";
 	}
@@ -238,6 +238,10 @@ public class Train {
 
 	public String getType() {
 		return type;
+	}
+
+	public ArrayList<Passenger> getPassengers() {
+		return passengers;
 	}
 
 }

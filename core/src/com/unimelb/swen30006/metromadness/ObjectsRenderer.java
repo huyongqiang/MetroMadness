@@ -33,11 +33,11 @@ public class ObjectsRenderer {
 			renderer.setColor(col);
 			float radius = train.TRAIN_WIDTH;
 			if (train.getType().equals("BigPassengerTrain")) {
-				float percentage = train.passengers.size() / 20f;
+				float percentage = train.getPassengers().size() / 20f;
 				renderer.setColor(col.cpy().lerp(Color.DARK_GRAY, percentage));
 				radius = train.TRAIN_WIDTH * (1 + percentage);
 			} else if (train.getType().equals("SmallPassengerTrain")) {
-				float percentage = train.passengers.size() / 10f;
+				float percentage = train.getPassengers().size() / 10f;
 				renderer.setColor(col.cpy().lerp(Color.DARK_GRAY, percentage));
 				radius = train.TRAIN_WIDTH * (1 + percentage);
 			}
@@ -78,7 +78,7 @@ public class ObjectsRenderer {
 		renderer.setColor(line.trackColour);
 
 		// Draw all the track sections
-		for (Track t : line.tracks) {
+		for (Track t : line.getTracks()) {
 			if (t.getType().equals("DualTrack"))
 				renderDualTrack(t);
 			else
