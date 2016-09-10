@@ -53,9 +53,9 @@ public class PassengerGenerator {
 		}else {
 			index = current_station - 1 - random.nextInt(current_station);
 		}
-		Station s = l.stations.get(index);
-		
-		return this.s.generatePassenger(s);
+		Station end = l.stations.get(index);
+		return new Passenger(s, end);
+		//return this.s.generatePassenger(s);
 	}
 	
 }

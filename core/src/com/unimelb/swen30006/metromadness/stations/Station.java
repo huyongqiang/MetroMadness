@@ -24,7 +24,7 @@ public class Station {
 	public static final float DEPARTURE_TIME = 2;
 	public PassengerRouter router;
 	public float maxPassengers; //NEW
-	public Passenger[] passengers;
+	public Passenger[] passengers; // NEW
 
 	public Station(float x, float y, PassengerRouter router, String name,float maxPassengers){
 		this.name = name;
@@ -91,9 +91,9 @@ public class Station {
 				+ ", router=" + router + "]";
 	}
 
-	public Passenger generatePassenger(Station s) {
-		return new Passenger(this, s);
-	}
+	//public Passenger generatePassenger(Station s) {
+		//return new Passenger(this, s);
+	//}
 	public ArrayList<Line> getLines(){
 		return lines;
 	}

@@ -42,7 +42,6 @@ public class Simulation {
 				Passenger[] passengers = passengerGenerator.generatePassengers();
 				s.assignPassengers(passengers);
 			} 
-		//this.passengers = new ArrayList<Passenger>();
 
 		// Create a list of trains
 		this.trains = new ArrayList<Train>();

@@ -57,10 +57,12 @@ public class ActiveStation extends Station {
 			}*/
 		}
 	}
+	//NEW
 	@Override
 	public float getMaxPassengers(){
 		return maxVolume;
 	}
+	//NEW
 	@Override
 	public void assignPassengers(Passenger[] passengers) {
 		for(Passenger p1 : passengers){
