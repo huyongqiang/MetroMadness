@@ -99,15 +99,15 @@ public class ObjectsRenderer {
 
 	public void renderStation(Station station) {
 		float radius = station.RADIUS;
-		for (int i = 0; (i < station.lines.size() && i < station.MAX_LINES); i++) {
-			Line l = station.lines.get(i);
+		for (int i = 0; (i < station.getLines().size() && i < station.MAX_LINES); i++) {
+			Line l = station.getLines().get(i);
 			renderer.setColor(l.lineColour);
 			renderer.circle(station.position.x, station.position.y, radius, station.NUM_CIRCLE_STATMENTS);
 			radius = radius - 1;
 		}
 
 		// Calculate the percentage
-		float t = station.trains.size() / (float) station.PLATFORMS;
+		float t = station.getTrains().size() / (float) station.PLATFORMS;
 		Color c = Color.WHITE.cpy().lerp(Color.DARK_GRAY, t);
 		renderer.setColor(c);
 		renderer.circle(station.position.x, station.position.y, radius, station.NUM_CIRCLE_STATMENTS);

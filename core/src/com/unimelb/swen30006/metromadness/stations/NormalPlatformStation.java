@@ -10,8 +10,8 @@ import com.unimelb.swen30006.metromadness.trains.Train;
 public class NormalPlatformStation extends Station {
 
 	// public PassengerGenerator g;
-	public ArrayList<Passenger> waiting;
-	public float maxVolume;
+	private ArrayList<Passenger> waiting;
+	private float maxVolume;
 
 	public NormalPlatformStation(float x, float y, PassengerRouter router, String name, float maxPax) {
 		super(x, y, router, name, maxPax);
@@ -23,11 +23,11 @@ public class NormalPlatformStation extends Station {
 	@Override
 	public void enter(Train t) throws Exception {
 		//checks if train is small enough
-		if(trains.size() >= PLATFORMS && checkTrain(t)){
+		if(getTrains().size() >= PLATFORMS && checkTrain(t)){
 			throw new Exception();
 		} else {
 			// Add the train
-			this.trains.add(t);
+			this.getTrains().add(t);
 			// Add the waiting passengers
 			Iterator<Passenger> pIter = this.waiting.iterator();
 			while(pIter.hasNext()){
