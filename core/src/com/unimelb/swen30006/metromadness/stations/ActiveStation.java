@@ -66,7 +66,10 @@ public class ActiveStation extends Station {
 	@Override
 	public void assignPassengers(Passenger[] passengers) {
 		for(Passenger p1 : passengers){
-			this.waiting.add(p1);
+			if(this.waiting.size() < maxVolume)
+				this.waiting.add(p1);
+			else
+				break;
 		}
 	}
 
