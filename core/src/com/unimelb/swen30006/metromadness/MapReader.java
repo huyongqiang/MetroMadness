@@ -126,7 +126,7 @@ public class MapReader {
 			int maxPax = e.getInt("max_passengers");
 			return new ActiveStation(x_loc, y_loc, r, name, maxPax);
 		} else if (type.equals("Passive")){
-			return new Station(x_loc, y_loc, r, name);
+			return new Station(x_loc, y_loc, r, name,0);
 		}
 		
 		return null;

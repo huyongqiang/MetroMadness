@@ -10,14 +10,14 @@ import com.unimelb.swen30006.metromadness.trains.Train;
 
 public class ActiveStation extends Station {
 
-	public PassengerGenerator g;
+	//public PassengerGenerator g;
 	public ArrayList<Passenger> waiting;
 	public float maxVolume;
 	
 	public ActiveStation(float x, float y, PassengerRouter router, String name, float maxPax) {
-		super(x, y, router, name);
+		super(x, y, router, name,maxPax);
 		this.waiting = new ArrayList<Passenger>();
-		this.g = new PassengerGenerator(this, this.lines, maxPax);
+		//this.g = new PassengerGenerator(this, this.lines, maxPax);
 		this.maxVolume = maxPax;
 	}
 	
@@ -46,14 +46,25 @@ public class ActiveStation extends Station {
 				return;
 			}
 			// Add the new passenger
-			Passenger[] ps = this.g.generatePassengers();
+			//TODO needs a method to generate more
+			/*Passenger[] ps = this.g.generatePassengers();
 			for(Passenger p: ps){
 				try {
 					t.embark(p);
 				} catch(Exception e){
 					this.waiting.add(p);
 				}
-			}
+			}*/
+		}
+	}
+	@Override
+	public float getMaxPassengers(){
+		return maxVolume;
+	}
+	@Override
+	public void assignPassengers(Passenger[] passengers) {
+		for(Passenger p1 : passengers){
+			this.waiting.add(p1);
 		}
 	}
 
