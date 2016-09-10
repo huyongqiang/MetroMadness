@@ -2,20 +2,20 @@
 
 	<stations>
 		<station>
-			<type>Active</type>
+			<type>Large</type>
 			<name>Hurstbridge</name>
 			<x_loc>5200</x_loc>
 			<y_loc>7600</y_loc>
 			<router>simple</router>
-			<max_passengers> 100 </max_passengers>
+			<max_passengers> 200 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Small</type>
 			<name>Eltham</name>
 			<x_loc>4840</x_loc>
 			<y_loc>	7320</y_loc>
 			<router>simple</router>
-			<max_passengers> 100 </max_passengers>
+			<max_passengers> 50 </max_passengers>
 		</station>
 		<station>
 			<type>Active</type>

@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.routers.PassengerRouter;
+import com.unimelb.swen30006.metromadness.tracks.Line;
 import com.unimelb.swen30006.metromadness.trains.Train;
 
 public class ShortPlatformStation extends Station {
@@ -22,39 +23,38 @@ public class ShortPlatformStation extends Station {
 
 	@Override
 	public void enter(Train t) throws Exception {
-		//checks if train is small enough
-		if(trains.size() >= PLATFORMS && checkTrain(t)){
+		// checks if train is small enough
+		if (trains.size() >= PLATFORMS) {
 			throw new Exception();
-		} else {
+		} else if (checkTrain(t)){
 			// Add the train
 			this.trains.add(t);
 			// Add the waiting passengers
 			Iterator<Passenger> pIter = this.waiting.iterator();
-			while(pIter.hasNext()){
+			while (pIter.hasNext()) {
 				Passenger p = pIter.next();
 				try {
 					t.embark(p);
 					pIter.remove();
-				} catch (Exception e){
+				} catch (Exception e) {
 					// Do nothing, already waiting
 					break;
 				}
 			}
-			
-			//Do not add new passengers if there are too many already
-			if (this.waiting.size() > maxVolume){
+
+			// Do not add new passengers if there are too many already
+			if (this.waiting.size() > maxVolume) {
 				return;
 			}
 			// Add the new passenger
-			//TODO needs a method to generate more
-			/*Passenger[] ps = this.g.generatePassengers();
-			for(Passenger p: ps){
-				try {
-					t.embark(p);
-				} catch(Exception e){
-					this.waiting.add(p);
-				}
-			}*/
+			// TODO needs a method to generate more
+			/*
+			 * Passenger[] ps = this.g.generatePassengers(); for(Passenger p:
+			 * ps){ try { t.embark(p); } catch(Exception e){
+			 * this.waiting.add(p); } }
+			 */
+		}else{
+			depart(t);
 		}
 	}
 
@@ -74,6 +74,15 @@ public class ShortPlatformStation extends Station {
 
 	public boolean checkTrain(Train t) {
 		if (t.getType().equals("SmallPassengerTrain")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean canEnter(Line l, Train t) throws Exception {
+		if (trains.size() < PLATFORMS && checkTrain(t)) {
 			return true;
 		} else {
 			return false;
