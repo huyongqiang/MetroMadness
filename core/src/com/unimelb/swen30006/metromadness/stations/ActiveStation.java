@@ -23,11 +23,11 @@ public class ActiveStation extends Station {
 	
 	@Override
 	public void enter(Train t) throws Exception {
-		if(trains.size() >= PLATFORMS){
+		if(getTrains().size() >= PLATFORMS){
 			throw new Exception();
 		} else {
 			// Add the train
-			this.trains.add(t);
+			this.getTrains().add(t);
 			// Add the waiting passengers
 			Iterator<Passenger> pIter = this.waiting.iterator();
 			while(pIter.hasNext()){

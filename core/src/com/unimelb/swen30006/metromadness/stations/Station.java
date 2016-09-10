@@ -18,13 +18,13 @@ public class Station {
 	public static final float RADIUS = 6;
 	public static final int NUM_CIRCLE_STATMENTS = 100;
 	public static final int MAX_LINES = 3;
-	public String name;
-	public ArrayList<Line> lines;
-	public ArrayList<Train> trains;
+	private String name;
+	protected ArrayList<Line> lines;
+	private ArrayList<Train> trains;
 	public static final float DEPARTURE_TIME = 2;
-	public PassengerRouter router;
-	public float maxPassengers; // NEW
-	public Passenger[] passengers; // NEW
+	protected PassengerRouter router;
+	protected float maxPassengers; // NEW
+	protected Passenger[] passengers; // NEW
 
 	public Station(float x, float y, PassengerRouter router, String name, float maxPassengers) {
 		this.name = name;
@@ -58,23 +58,23 @@ public class Station {
 	// }
 
 	public void enter(Train t) throws Exception {
-		if (trains.size() >= PLATFORMS) {
+		if (getTrains().size() >= PLATFORMS) {
 			throw new Exception();
 		} else {
-			this.trains.add(t);
+			this.getTrains().add(t);
 		}
 	}
 
 	public void depart(Train t) throws Exception {
-		if (this.trains.contains(t)) {
-			this.trains.remove(t);
+		if (this.getTrains().contains(t)) {
+			this.getTrains().remove(t);
 		} else {
 			throw new Exception();
 		}
 	}
 
 	public boolean canEnter(Line l, Train t) throws Exception {
-		return trains.size() < PLATFORMS;
+		return getTrains().size() < PLATFORMS;
 	}
 
 	// Returns departure time in seconds
@@ -88,7 +88,7 @@ public class Station {
 
 	@Override
 	public String toString() {
-		return "Station [position=" + position + ", name=" + name + ", trains=" + trains.size() + ", router=" + router
+		return "Station [position=" + position + ", name=" + getName() + ", trains=" + getTrains().size() + ", router=" + router
 				+ "]";
 	}
 
@@ -105,10 +105,19 @@ public class Station {
 	}
 
 	public boolean canPassThrough(Line l, Train t) throws Exception {
-		return trains.size() < PLATFORMS;
+		return getTrains().size() < PLATFORMS;
 	}
 
 	public void passThrough(Train t) {
 
 	}
+
+	public ArrayList<Train> getTrains() {
+		return trains;
+	}
+
+	public String getName() {
+		return name;
+	}
+
 }

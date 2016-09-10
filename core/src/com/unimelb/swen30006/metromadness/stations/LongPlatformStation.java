@@ -24,11 +24,11 @@ public class LongPlatformStation extends Station {
 	public void enter(Train t) throws Exception {
 		//checks if there is space in on the platforms.
 		// station has longest size so can accept all trains
-		if(trains.size() >= PLATFORMS){
+		if(getTrains().size() >= PLATFORMS){
 			throw new Exception();
 		} else {
 			// Add the train
-			this.trains.add(t);
+			this.getTrains().add(t);
 			// Add the waiting passengers
 			Iterator<Passenger> pIter = this.waiting.iterator();
 			while(pIter.hasNext()){

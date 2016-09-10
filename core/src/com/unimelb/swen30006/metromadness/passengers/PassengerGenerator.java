@@ -9,12 +9,12 @@ import com.unimelb.swen30006.metromadness.tracks.Line;
 public class PassengerGenerator {
 	
 	// The station that passengers are getting on
-	public Station s;
+	private Station s;
 	// The line they are travelling on
-	public ArrayList<Line> lines;
+	private ArrayList<Line> lines;
 	
 	// The max volume
-	public float maxVolume;
+	private float maxVolume;
 	
 	public PassengerGenerator(Station s, ArrayList<Line> lines, float max){
 		this.s = s;

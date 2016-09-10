@@ -24,11 +24,11 @@ public class ShortPlatformStation extends Station {
 	@Override
 	public void enter(Train t) throws Exception {
 		// checks if train is small enough
-		if (trains.size() >= PLATFORMS) {
+		if (getTrains().size() >= PLATFORMS) {
 			throw new Exception();
 		} else if (checkTrain(t)){
 			// Add the train
-			this.trains.add(t);
+			this.getTrains().add(t);
 			// Add the waiting passengers
 			Iterator<Passenger> pIter = this.waiting.iterator();
 			while (pIter.hasNext()) {
@@ -82,7 +82,7 @@ public class ShortPlatformStation extends Station {
 
 	@Override
 	public boolean canEnter(Line l, Train t) throws Exception {
-		if (trains.size() < PLATFORMS && checkTrain(t)) {
+		if (getTrains().size() < PLATFORMS && checkTrain(t)) {
 			return true;
 		} else {
 			return false;

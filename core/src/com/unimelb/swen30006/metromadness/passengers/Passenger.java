@@ -4,14 +4,14 @@ import com.unimelb.swen30006.metromadness.stations.Station;
 
 public class Passenger {
 
-	public Station begining;
-	public Station destination;
-	public float travelTime;
-	public boolean reachedDestination;
+	private Station begining;
+	private Station destination;
+	private float travelTime;
+	private boolean reachedDestination;
 	
 	public Passenger(Station start, Station end){
 		this.begining = start;
-		this.destination = end;
+		this.setDestination(end);
 		this.reachedDestination = false;
 		this.travelTime = 0;
 	}
@@ -22,6 +22,13 @@ public class Passenger {
 		}
 	}
 
-	
+	public Station getDestination() {
+		return destination;
+	}
+
+	public void setDestination(Station destination) {
+		this.destination = destination;
+	}
+
 	
 }
