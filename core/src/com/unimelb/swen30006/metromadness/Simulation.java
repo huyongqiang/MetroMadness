@@ -34,14 +34,7 @@ public class Simulation {
 		this.stations = new ArrayList<Station>();
 		this.stations.addAll(m.getStations());
 		
-		//NEW get lines is new
-		// For each station generate passengers 
-		
-		for (Station s : stations){
-				PassengerGenerator passengerGenerator = new PassengerGenerator(s, s.getLines(),s.getMaxPassengers());
-				Passenger[] passengers = passengerGenerator.generatePassengers();
-				s.assignPassengers(passengers);
-			} 
+
 
 		// Create a list of trains
 		this.trains = new ArrayList<Train>();
@@ -57,6 +50,8 @@ public class Simulation {
 		for (Train t : this.trains) {
 			t.update(Gdx.graphics.getDeltaTime());
 		}
+		generatePassengers(stations);
+		
 	}
 
 	public void render(ShapeRenderer renderer) {
@@ -74,4 +69,13 @@ public class Simulation {
 		// }
 	}
 
+	public void generatePassengers(ArrayList<Station> stations){
+		//NEW get lines is new
+		// For each station generate passengers 
+		for (Station s : stations){
+				PassengerGenerator passengerGenerator = new PassengerGenerator(s, s.getLines(),s.getMaxPassengers());
+				Passenger[] passengers = passengerGenerator.generatePassengers();
+				s.assignPassengers(passengers);
+			} 
+	}
 }
