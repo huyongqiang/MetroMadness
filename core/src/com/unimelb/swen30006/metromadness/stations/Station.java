@@ -23,13 +23,16 @@ public class Station {
 	public ArrayList<Train> trains;
 	public static final float DEPARTURE_TIME = 2;
 	public PassengerRouter router;
+	public float maxPassengers; //NEW
+	public Passenger[] passengers;
 
-	public Station(float x, float y, PassengerRouter router, String name){
+	public Station(float x, float y, PassengerRouter router, String name,float maxPassengers){
 		this.name = name;
 		this.router = router;
 		this.position = new Point2D.Float(x,y);
 		this.lines = new ArrayList<Line>();
 		this.trains = new ArrayList<Train>();
+		this.maxPassengers = maxPassengers;
 	}
 	
 	public void registerLine(Line l){
@@ -90,6 +93,16 @@ public class Station {
 
 	public Passenger generatePassenger(Station s) {
 		return new Passenger(this, s);
+	}
+	public ArrayList<Line> getLines(){
+		return lines;
+	}
+	public float getMaxPassengers(){
+		return getMaxPassengers();
+	}
+
+	public void assignPassengers(Passenger[] passengers) {
+		this.passengers = passengers;
 	}
 	
 	
