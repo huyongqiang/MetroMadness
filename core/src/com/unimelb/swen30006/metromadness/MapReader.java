@@ -124,7 +124,7 @@ public class MapReader {
 		int y_loc = e.getInt("y_loc")/8;
 		String router = e.get("router");
 		PassengerRouter r = createRouter(router);
-		if(type.equals("Active")){
+		if(type.equals("Normal")){
 			int maxPax = e.getInt("max_passengers");
 			return new ActiveStation(x_loc, y_loc, r, name, maxPax);
 		}else if(type.equals("Small")) {
