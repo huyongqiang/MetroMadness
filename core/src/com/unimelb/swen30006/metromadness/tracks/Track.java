@@ -12,7 +12,7 @@ public class Track {
 	public Point2D.Float startPos;
 	public Point2D.Float endPos;
 	public Color trackColour;
-	public boolean occupied;
+	private boolean occupied;
 	protected String type = "Track";
 	
 	public Track(Point2D.Float start, Point2D.Float end, Color trackCol){
