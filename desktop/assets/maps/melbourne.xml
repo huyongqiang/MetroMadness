@@ -963,12 +963,7 @@
 			<start>Rosanna</start>
 			<direction>forward</direction>
 		</train>
-		<train>
-			<type>BigPassenger</type>
-			<line>Belgrave</line>
-			<start>Camberwell</start>
-			<direction>forward</direction>
-		</train>
+
 		
 	</trains>
 </map>

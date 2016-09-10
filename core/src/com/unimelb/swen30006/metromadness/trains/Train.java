@@ -165,6 +165,7 @@ public class Train {
 					if (endOfLine) {
 						this.forward = !this.forward;
 					}
+					this.track.leave(this);
 					this.track = this.trainLine.nextTrack(this.station, this.forward);
 					if (this.track.canEnter(this.forward)) {
 						try {
