@@ -108,10 +108,6 @@ public class Station {
 		return getTrains().size() < PLATFORMS;
 	}
 
-	public void passThrough(Train t) {
-
-	}
-
 	public ArrayList<Train> getTrains() {
 		return trains;
 	}

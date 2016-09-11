@@ -163,6 +163,7 @@ public class Train {
 					this.pos = (Point2D.Float) this.station.position.clone();
 					boolean endOfLine = this.trainLine.endOfLine(this.station);
 					if (endOfLine) {
+						this.track.leave(this);
 						this.forward = !this.forward;
 					}
 					this.track.leave(this);
