@@ -158,13 +158,12 @@ public class Train {
 			}
 			break;
 		case PASS_THROUGH:
-
-			// Waiting to enter, we need to check the station has room and if so
-			// then we need to enter, otherwise we just wait
+			//Pass through a station that a train cannot stop at
 			try {
 				if (this.station.canPassThrough(this.trainLine, this)) {
 					this.pos = (Point2D.Float) this.station.position.clone();
 					boolean endOfLine = this.trainLine.endOfLine(this.station);
+					//if at the end of the line turn around
 					if (endOfLine) {
 						this.track.leave(this);
 						this.forward = !this.forward;

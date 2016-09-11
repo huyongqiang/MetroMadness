@@ -67,7 +67,12 @@ public class NormalPlatformStation extends Station {
 			this.waiting.add(p1);
 		}
 	}
-
+	/**
+	 * checks if the train can stop at the station
+	 * 
+	 * @param Train
+	 *            the train line
+	 */
 	public boolean checkTrain(Train t) {
 		if (t.getType().equals("SmallPassengerTrain") | t.getType().equals("NormalPassengerTrain")) {
 			return true;
