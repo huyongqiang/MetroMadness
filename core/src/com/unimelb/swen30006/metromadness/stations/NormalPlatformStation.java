@@ -6,7 +6,11 @@ import java.util.Iterator;
 import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.routers.PassengerRouter;
 import com.unimelb.swen30006.metromadness.trains.Train;
-
+/**
+ * Sub type of Station for normal station
+ * @author ElliottUpton, Guangling Yang, Di Wang
+ * Group 15
+ */
 public class NormalPlatformStation extends Station {
 
 	// public PassengerGenerator g;

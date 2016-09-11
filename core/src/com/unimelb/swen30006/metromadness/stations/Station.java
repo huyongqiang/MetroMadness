@@ -3,13 +3,15 @@ package com.unimelb.swen30006.metromadness.stations;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.routers.PassengerRouter;
 import com.unimelb.swen30006.metromadness.tracks.Line;
 import com.unimelb.swen30006.metromadness.trains.Train;
-
+/**
+ * Station Super Class
+ * @author ElliottUpton, Guangling Yang, Di Wang
+ * Group 15
+ */
 public class Station {
 
 	public static final int PLATFORMS = 2;

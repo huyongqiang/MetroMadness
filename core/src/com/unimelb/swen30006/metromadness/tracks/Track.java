@@ -3,9 +3,11 @@ package com.unimelb.swen30006.metromadness.tracks;
 import java.awt.geom.Point2D;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.unimelb.swen30006.metromadness.trains.Train;
-
+/**
+* @author ElliottUpton, Guangling Yang, Di Wang
+* Group 15
+*/
 public class Track {
 	public static final float DRAW_RADIUS=10f;
 	public static final int LINE_WIDTH=6;
@@ -21,10 +23,6 @@ public class Track {
 		this.trackColour = trackCol;
 		this.occupied = false;
 	}
-	
-//	public void render(ShapeRenderer renderer){
-//		renderer.rectLine(startPos.x, startPos.y, endPos.x, endPos.y, LINE_WIDTH);
-//	}
 	
 	public boolean canEnter(boolean forward){
 		return !this.occupied;

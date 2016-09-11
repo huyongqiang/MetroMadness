@@ -7,7 +7,11 @@ import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.routers.PassengerRouter;
 import com.unimelb.swen30006.metromadness.tracks.Line;
 import com.unimelb.swen30006.metromadness.trains.Train;
-
+/**
+ * Sub type of Station for short platforms
+ * @author ElliottUpton, Guangling Yang, Di Wang
+ * Group 15
+ */
 public class ShortPlatformStation extends Station {
 
 	private ArrayList<Passenger> waiting;

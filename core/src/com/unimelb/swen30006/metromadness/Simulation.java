@@ -9,7 +9,12 @@ import com.unimelb.swen30006.metromadness.passengers.PassengerGenerator;
 import com.unimelb.swen30006.metromadness.stations.Station;
 import com.unimelb.swen30006.metromadness.tracks.Line;
 import com.unimelb.swen30006.metromadness.trains.Train;
-
+/**
+ * the main controller simulation class 
+ * @author ElliottUpton , Guangling Yang, Di Wang
+ * Group 15
+ *
+ */
 public class Simulation {
 
 	public ArrayList<Station> stations;
@@ -54,7 +59,6 @@ public class Simulation {
 	}
 
 	public void generatePassengers(ArrayList<Station> stations) {
-		// NEW get lines is new
 		// For each station generate passengers
 		for (Station s : stations) {
 			PassengerGenerator passengerGenerator = new PassengerGenerator(s, s.getLines(), s.getPassengerSpace());

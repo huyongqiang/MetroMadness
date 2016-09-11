@@ -5,12 +5,15 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.stations.Station;
 import com.unimelb.swen30006.metromadness.tracks.Line;
 import com.unimelb.swen30006.metromadness.tracks.Track;
-
+/**
+ * Train super class
+ * @author ElliottUpton, Guangling Yang, Di Wang
+ * Group 15
+ */
 public class Train {
 
 	// The state that a train can be in

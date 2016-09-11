@@ -6,7 +6,12 @@ import java.util.Iterator;
 import com.unimelb.swen30006.metromadness.passengers.Passenger;
 import com.unimelb.swen30006.metromadness.routers.PassengerRouter;
 import com.unimelb.swen30006.metromadness.trains.Train;
-
+/**
+ * Sub type of Station for long station
+ * @author ElliottUpton, Guangling Yang, Di Wang
+ * Group 15
+ *
+ */
 public class LongPlatformStation extends Station {
 
 	// public PassengerGenerator g;
