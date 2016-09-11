@@ -18,7 +18,7 @@ public class Simulation {
 	private ObjectsRenderer mapRenderer;
 	public ArrayList<Passenger> passengers;
 
-	public Simulation(String fileName){
+	public Simulation(String fileName) {
 		// Create a map reader and read in the file
 		MapReader m = new MapReader(fileName);
 		m.process();
@@ -30,8 +30,6 @@ public class Simulation {
 		// Create a list of stations
 		this.stations = new ArrayList<Station>();
 		this.stations.addAll(m.getStations());
-		
-
 
 		// Create a list of trains
 		this.trains = new ArrayList<Train>();
@@ -48,31 +46,20 @@ public class Simulation {
 			t.update(Gdx.graphics.getDeltaTime());
 		}
 		generatePassengers(stations);
-		
+
 	}
 
 	public void render(ShapeRenderer renderer) {
 		mapRenderer.rendererObjects(renderer);
-
-		// for(Line l: this.lines){
-		// l.render(renderer);
-		// }
-		//
-		// for(Train t: this.trains){
-		// t.render(renderer);
-		// }
-		// for(Station s: this.stations){
-		// s.render(renderer);
-		// }
 	}
 
-	public void generatePassengers(ArrayList<Station> stations){
-		//NEW get lines is new
-		// For each station generate passengers 
-		for (Station s : stations){
-				PassengerGenerator passengerGenerator = new PassengerGenerator(s, s.getLines(),s.getMaxPassengers());
-				Passenger[] passengers = passengerGenerator.generatePassengers();
-				s.assignPassengers(passengers);
-			} 
+	public void generatePassengers(ArrayList<Station> stations) {
+		// NEW get lines is new
+		// For each station generate passengers
+		for (Station s : stations) {
+			PassengerGenerator passengerGenerator = new PassengerGenerator(s, s.getLines(), s.getPassengerSpace());
+			Passenger[] passengers = passengerGenerator.generatePassengers();
+			s.assignPassengers(passengers);
+		}
 	}
 }

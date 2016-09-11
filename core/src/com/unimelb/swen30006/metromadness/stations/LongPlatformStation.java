@@ -46,30 +46,19 @@ public class LongPlatformStation extends Station {
 			if (this.waiting.size() > maxVolume){
 				return;
 			}
-			// Add the new passenger
-			//TODO needs a method to generate more
-			/*Passenger[] ps = this.g.generatePassengers();
-			for(Passenger p: ps){
-				try {
-					t.embark(p);
-				} catch(Exception e){
-					this.waiting.add(p);
-				}
-			}*/
 		}
 	}
-
-	// NEW
 	@Override
 	public float getMaxPassengers() {
 		return maxVolume;
 	}
-
-	// NEW
 	@Override
 	public void assignPassengers(Passenger[] passengers) {
 		for (Passenger p1 : passengers) {
 			this.waiting.add(p1);
 		}
+	}
+	public int getPassengerSpace(){
+		return (int) maxPassengers - waiting.size();
 	}
 }

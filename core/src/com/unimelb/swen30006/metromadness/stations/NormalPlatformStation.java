@@ -57,14 +57,10 @@ public class NormalPlatformStation extends Station {
 			}*/
 		}
 	}
-
-	// NEW
 	@Override
 	public float getMaxPassengers() {
 		return maxVolume;
 	}
-
-	// NEW
 	@Override
 	public void assignPassengers(Passenger[] passengers) {
 		for (Passenger p1 : passengers) {
@@ -78,5 +74,8 @@ public class NormalPlatformStation extends Station {
 		} else {
 			return false;
 		}
+	}
+	public int getPassengerSpace(){
+		return (int) maxPassengers - waiting.size();
 	}
 }

@@ -39,24 +39,6 @@ public class Station {
 		this.lines.add(l);
 	}
 
-	// public void render(ShapeRenderer renderer){
-	// float radius = RADIUS;
-	// for(int i=0; (i<this.lines.size() && i<MAX_LINES); i++){
-	// Line l = this.lines.get(i);
-	// renderer.setColor(l.lineColour);
-	// renderer.circle(this.position.x, this.position.y, radius,
-	// NUM_CIRCLE_STATMENTS);
-	// radius = radius - 1;
-	// }
-	//
-	// // Calculate the percentage
-	// float t = this.trains.size()/(float)PLATFORMS;
-	// Color c = Color.WHITE.cpy().lerp(Color.DARK_GRAY, t);
-	// renderer.setColor(c);
-	// renderer.circle(this.position.x, this.position.y, radius,
-	// NUM_CIRCLE_STATMENTS);
-	// }
-
 	public void enter(Train t) throws Exception {
 		if (getTrains().size() >= PLATFORMS) {
 			throw new Exception();
@@ -114,6 +96,9 @@ public class Station {
 
 	public String getName() {
 		return name;
+	}
+	public int getPassengerSpace(){
+		return (int) maxPassengers;
 	}
 
 }
