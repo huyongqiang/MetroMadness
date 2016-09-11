@@ -22,7 +22,7 @@ public class LongPlatformStation extends Station {
 
 	@Override
 	public void enter(Train t) throws Exception {
-		//checks if there is space in on the platforms.
+		// checks if there is space in on the platforms.
 		// station has longest size so can accept all trains
 		if(getTrains().size() >= PLATFORMS){
 			throw new Exception();
@@ -48,17 +48,27 @@ public class LongPlatformStation extends Station {
 			}
 		}
 	}
+	
 	@Override
 	public float getMaxPassengers() {
 		return maxVolume;
 	}
+	/**
+	 * assigns passengers to a Station
+	 * 
+	 * @param Passengers
+	 *            the passengers to assign
+	 */
 	@Override
 	public void assignPassengers(Passenger[] passengers) {
 		for (Passenger p1 : passengers) {
 			this.waiting.add(p1);
 		}
 	}
-	public int getPassengerSpace(){
-		return (int) maxPassengers - waiting.size();
+	/**
+	 * @returns the amount of space left in the station
+	 */
+	public float getPassengerSpace(){
+		return maxPassengers - waiting.size();
 	}
 }

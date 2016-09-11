@@ -97,7 +97,10 @@ public class ShortPlatformStation extends Station {
 			return false;
 		}
 	}
-	public int getPassengerSpace(){
-		return (int) maxPassengers - waiting.size();
+	/**
+	 * @returns the amount of space left in the station
+	 */
+	public float getPassengerSpace(){
+		return maxPassengers - waiting.size();
 	}
 }

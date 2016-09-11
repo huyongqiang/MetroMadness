@@ -97,8 +97,8 @@ public class Station {
 	public String getName() {
 		return name;
 	}
-	public int getPassengerSpace(){
-		return (int) maxPassengers;
+	public float getPassengerSpace(){
+		return maxPassengers;
 	}
 
 }
