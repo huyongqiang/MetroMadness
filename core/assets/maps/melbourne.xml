@@ -7,7 +7,7 @@
 			<x_loc>5200</x_loc>
 			<y_loc>7600</y_loc>
 			<router>simple</router>
-			<max_passengers>200</max_passengers>
+			<max_passengers> 200 </max_passengers>
 		</station>
 		<station>
 			<type>Small</type>
@@ -15,10 +15,10 @@
 			<x_loc>4840</x_loc>
 			<y_loc>	7320</y_loc>
 			<router>simple</router>
-			<max_passengers>50</max_passengers>
+			<max_passengers> 50 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Greensborough</name>
 			<x_loc>4700</x_loc>
 			<y_loc>7140</y_loc>
@@ -26,7 +26,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Rosanna</name>
 			<x_loc>4400</x_loc>
 			<y_loc>6780</y_loc>
@@ -34,7 +34,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Fairfield</name>
 			<x_loc>3800</x_loc>
 			<y_loc>6200</y_loc>
@@ -42,7 +42,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Clifton Hill</name>
 			<x_loc>3400</x_loc>
 			<y_loc>5900</y_loc>
@@ -50,7 +50,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>North Richmond</name>
 			<x_loc>3400</x_loc>
 			<y_loc>5500</y_loc>
@@ -58,7 +58,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Jolimont</name>
 			<x_loc>3200</x_loc>
 			<y_loc>5000</y_loc>
@@ -66,39 +66,39 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Large</type>
 			<name>Flinders St</name>
 			<x_loc>2800</x_loc>
 			<y_loc>4800</y_loc>
 			<router>simple</router>
-			<max_passengers> 100 </max_passengers>
+			<max_passengers> 200 </max_passengers>
 		</station>
 			<station>
-			<type>Active</type>
+			<type>Large</type>
 			<name>Southern Cross</name>
 			<x_loc>2240</x_loc>
 			<y_loc>4800</y_loc>
 			<router>simple</router>
-			<max_passengers> 100 </max_passengers>
+			<max_passengers> 200 </max_passengers>
 		</station>	
 		<station>
-			<type>Active</type>
+			<type>Large</type>
 			<name>Flagstaff</name>
 			<x_loc>2240</x_loc>
 			<y_loc>5200</y_loc>
 			<router>simple</router>
-			<max_passengers> 100 </max_passengers>
+			<max_passengers> 200 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Small</type>
 			<name>Melbourne Central</name>
 			<x_loc>2800</x_loc>
 			<y_loc>5200</y_loc>
 			<router>simple</router>
-			<max_passengers> 100 </max_passengers>
+			<max_passengers> 50 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Ringwood</name>
 			<x_loc>6200</x_loc>
 			<y_loc>4800</y_loc>
@@ -106,7 +106,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>		
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Lilydale</name>
 			<x_loc>6800</x_loc>
 			<y_loc>5300</y_loc>
@@ -114,7 +114,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>		
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Belgrave</name>
 			<x_loc>7200</x_loc>
 			<y_loc>4000</y_loc>
@@ -122,7 +122,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>		
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Camberwell</name>
 			<x_loc>4400</x_loc>
 			<y_loc>4800</y_loc>
@@ -130,7 +130,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>	
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Alamein</name>
 			<x_loc>5000</x_loc>
 			<y_loc>4200</y_loc>
@@ -138,7 +138,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>	
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Burnley</name>
 			<x_loc>3800</x_loc>
 			<y_loc>4800</y_loc>
@@ -146,7 +146,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Glen Waverley</name>
 			<x_loc>5000</x_loc>
 			<y_loc>3600</y_loc>
@@ -154,7 +154,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Richmond</name>
 			<x_loc>3400</x_loc>
 			<y_loc>4800</y_loc>
@@ -162,7 +162,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>South Yarra</name>
 			<x_loc>3400</x_loc>
 			<y_loc>4500</y_loc>
@@ -170,7 +170,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Sandringham</name>
 			<x_loc>3400</x_loc>
 			<y_loc>3000</y_loc>
@@ -178,7 +178,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Epping</name>
 			<x_loc>3400</x_loc>
 			<y_loc>7800</y_loc>
@@ -186,7 +186,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>	
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Pakenham</name>
 			<x_loc>5800</x_loc>
 			<y_loc>2300</y_loc>
@@ -194,7 +194,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Caulfield</name>
 			<x_loc>3950</x_loc>
 			<y_loc>3850</y_loc>
@@ -202,7 +202,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Frankston</name>
 			<x_loc>3950</x_loc>
 			<y_loc>1500</y_loc>
@@ -210,7 +210,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Craigieburn</name>
 			<x_loc>2240</x_loc>
 			<y_loc>7700</y_loc>
@@ -218,7 +218,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>		
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>North Melbourne</name>
 			<x_loc>2240</x_loc>
 			<y_loc>5560</y_loc>
@@ -226,7 +226,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Macaulay</name>
 			<x_loc>2440</x_loc>
 			<y_loc>5700</y_loc>
@@ -234,7 +234,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>	
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Upfield</name>
 			<x_loc>2440</x_loc>
 			<y_loc>7400</y_loc>
@@ -242,7 +242,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>	
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>North Melbourne</name>
 			<x_loc>2240</x_loc>
 			<y_loc>5560</y_loc>
@@ -250,7 +250,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Sunshine</name>
 			<x_loc>1200</x_loc>
 			<y_loc>5560</y_loc>
@@ -258,7 +258,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Sydenham</name>
 			<x_loc>700</x_loc>
 			<y_loc>6100</y_loc>
@@ -266,7 +266,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Footscray</name>
 			<x_loc>1850</x_loc>
 			<y_loc>5560</y_loc>
@@ -274,7 +274,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Williamstown</name>
 			<x_loc>1840</x_loc>
 			<y_loc>4200</y_loc>
@@ -282,7 +282,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Newport</name>
 			<x_loc>1840</x_loc>
 			<y_loc>4700</y_loc>
@@ -290,7 +290,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Seaholme</name>
 			<x_loc>1840</x_loc>
 			<y_loc>4700</y_loc>
@@ -298,7 +298,7 @@
 			<max_passengers> 100 </max_passengers>
 		</station>
 		<station>
-			<type>Active</type>
+			<type>Normal</type>
 			<name>Werribee</name>
 			<x_loc>700</x_loc>
 			<y_loc>4100</y_loc>
@@ -963,12 +963,12 @@
 			<start>Rosanna</start>
 			<direction>forward</direction>
 		</train>
-		<train>
-			<type>BigPassenger</type>
-			<line>Belgrave</line>
-			<start>Camberwell</start>
-			<direction>forward</direction>
-		</train>
-		
+        <train>
+            <type>SmallPassenger</type>
+            <line>Belgrave</line>
+            <start>Camberwell</start>
+            <direction>forward</direction>
+        </train>
 	</trains>
+    
 </map>
